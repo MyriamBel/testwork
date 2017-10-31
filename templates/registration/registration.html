@@ -1,0 +1,12 @@
+{% extends "base_non_auth.html" %}
+{% block title %}
+Регистрация на сайте
+{% endblock %}
+{% block body %}
+<form name="registration_form" method="post" action="{% url 'registration:createuser' as var %}">
+    {% csrf_token %}
+    {{ uform.as_p }}
+    {{ pform.as_p }}
+    <input type="submit" value="Регистрация" />
+</form>
+{% endblock %}

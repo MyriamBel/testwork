@@ -1,0 +1,11 @@
+{% extends "base_auth.html" %}
+{% block title %}
+Все анкеты пользователей
+{% endblock %}
+{% block body %}
+{% for i in context.choice_ %}
+<p><a href="{% url 'about:about_page {{i.id}}' %}">{{i.first_name}}{{i.last_name}}</a></p>
+{% empty %}
+<p>Анкеты не найдены</p>
+{% endfor %}
+{% endblock %}

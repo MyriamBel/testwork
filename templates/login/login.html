@@ -1,0 +1,12 @@
+{% extends "base_non_auth.html" %}
+{% block title %}
+Вход на сайт
+{% endblock %}
+{% block body %}
+{% if message %} {{message}} {% endif %}
+<form name="login_form" method="post" action="{% url 'home:home_page' as var %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Вход" />
+</form>
+{% endblock %}

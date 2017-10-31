@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block links %}
+<table width="100%">
+    <tr>
+        <td width="50%">
+            <a href="{% url 'registration:registration_page' %}">Зарегистрироваться</a>
+        </td>
+        <td width="50%">
+            <a href="{% url 'login:login_page' %}">Войти</a>
+        </td>
+    </tr>
+</table>
+{% endblock %}

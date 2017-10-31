@@ -1,0 +1,25 @@
+{% load staticfiles %}
+{% block page %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            background: {% static 'imgs/abstract-940049.jpg' %} 100% 100% no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body background="{% static 'imgs/abstract-940049.jpg' %}">
+<table class="logo" width="100%" border="0">
+    <tr>
+        <td width="20%"><a href="{% url 'home:home_page' %}"><img src="{% static 'imgs/python3.png' %}" alt="Logo"></a></td>
+        <td width="80%">{% block links %}{% endblock %}</td>
+    </tr>
+</table>
+{% block body %}{% endblock %}
+</body>
+</html>
+{% endblock %}
