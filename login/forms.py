@@ -21,7 +21,7 @@ class LoginForm(Form):
         if not self.errors:
             user = authenticate(username=cleaned_data['username'], password=cleaned_data['password'])
             if user is None:
-                raise forms.ValidationError(u'Имя пользователя и пароль не подходят')
+                raise forms.ValidationError(u'Логин не найден')
             self.user = user
         return cleaned_data
 

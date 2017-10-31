@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}
+Главная
+{% endblock %}
+{% block body %}
+<p>Добро пожаловать!</p>
+{% if user.is_autenticated %}
+<p>Вы можете просматривать профили</p>
+{% else %}
+<p>Для просмотра профилей войдите в аккаунт</p>
+{% endif %}
+{% endblock %}

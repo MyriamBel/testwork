@@ -5,6 +5,7 @@ from django.shortcuts import render
 
 def home_page(request, page, **id):
     if request.user.is_authenticated():
-        return render(request, 'home/home_auth.html', {})
+        user = request.user
+        return render(request, 'home/home.html', {'user': user})
     else:
-        return render(request, 'home/home_non_auth.html', {})
+        return render(request, 'home/home.html', {})

@@ -6,5 +6,5 @@ from . import views
 app_name = 'about'
 urlpatterns = [
     url(r'^$', views.about_page, name='about_page'),
-    url(r'^(?P<id>[0-9]+)/', views.about_id_page, name='about_id_page'),
+    url(r'^(?P<id>[0-9]+)/', views.about_id_page, name='profile'),
 ]
